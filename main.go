@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-    fmt.Print("hello")
+	fmt.Println("Let's go!!")
+
+	attendanceStatusTable := CreateSpecifiedAttendanceStatusTable()
+	mostSuitableDate := attendanceStatusTable.Decide()
+
+	fmt.Printf("mostSuitableDate is %+v\n", mostSuitableDate)
 }
